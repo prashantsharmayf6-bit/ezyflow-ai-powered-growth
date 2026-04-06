@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionWrapper from "@/components/SectionWrapper";
-import { Code, Bot, Layers, ArrowRight, CheckCircle, Monitor, MessageSquare, BarChart3 } from "lucide-react";
+import { Code, Bot, Layers, ArrowRight, CheckCircle, Monitor, MessageSquare, BarChart3, Smartphone } from "lucide-react";
 
 const serviceDetails = [
   {
