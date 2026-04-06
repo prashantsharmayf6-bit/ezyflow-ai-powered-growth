@@ -35,7 +35,7 @@ const Footer = () => (
         <div>
           <h4 className="mb-4 text-sm font-semibold text-[hsl(0,0%,95%)]">Contact</h4>
           <ul className="space-y-2 text-sm hero-muted">
-            <li>hello@ezyflow.com</li>
+            <li>info@ezyflow.in</li>
             <li><Link to="/contact" className="hover:text-primary">Get in Touch</Link></li>
           </ul>
         </div>
