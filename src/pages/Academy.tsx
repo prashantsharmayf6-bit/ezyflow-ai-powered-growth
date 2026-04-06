@@ -61,10 +61,10 @@ const Academy = () => (
         <div>
           <h2 className="mb-4 text-3xl font-bold">About the Program</h2>
           <p className="mb-4 text-muted-foreground">
-            The Ezyflow AI Academy offers practical, hands-on AI training using tools like ChatGPT, DALL·E, and more. Our programs focus on real-world use cases — not just theory.
+            The Ezyflow AI Academy offers practical, hands-on AI training through live and recorded webinars using tools like ChatGPT, DALL·E, and more. Our programs focus on real-world use cases — not just theory.
           </p>
           <p className="text-muted-foreground">
-            Whether you're a student, business owner, or professional, our courses are designed to help you leverage AI for practical outcomes and career growth.
+            Whether you're a student, business owner, or professional, our webinars are designed to help you leverage AI for practical outcomes and career growth.
           </p>
         </div>
         <div className="rounded-2xl border bg-background p-8">
