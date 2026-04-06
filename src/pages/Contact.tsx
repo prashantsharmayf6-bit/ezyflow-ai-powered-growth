@@ -67,7 +67,7 @@ const Contact = () => {
                   <div className="rounded-xl gradient-bg p-3"><Mail className="h-5 w-5 text-primary-foreground" /></div>
                   <div>
                     <div className="text-sm text-muted-foreground">Email</div>
-                    <div className="font-medium">hello@ezyflow.com</div>
+                    <div className="font-medium">info@ezyflow.in</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
