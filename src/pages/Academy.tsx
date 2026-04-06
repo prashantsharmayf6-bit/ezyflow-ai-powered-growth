@@ -29,17 +29,18 @@ const formats = [
 const Academy = () => (
   <div>
     {/* Hero */}
-    <section className="hero-dark pt-16">
-      <div className="container mx-auto px-4 py-24 md:py-32">
+    <section className="relative overflow-hidden bg-background pt-16">
+      <div className="absolute inset-0 opacity-30" style={{ background: "radial-gradient(ellipse at 50% 50%, hsl(217 91% 60% / 0.08), transparent 60%)" }} />
+      <div className="container relative mx-auto px-4 py-24 md:py-32">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 px-4 py-1.5 text-sm text-hero-muted">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm text-muted-foreground">
             <Award className="h-4 w-4 text-accent" /> Ezyflow AI Academy
           </div>
-          <h1 className="mb-6 text-4xl font-extrabold text-hero-foreground md:text-5xl">
+          <h1 className="mb-6 text-4xl font-extrabold md:text-5xl">
             Get Certified in{" "}
             <span className="gradient-text">Generative AI & Business Automation</span>
           </h1>
-          <p className="mb-10 text-lg text-hero-muted">
+          <p className="mb-10 text-lg text-muted-foreground">
             Practical AI training using the latest tools. Learn, build, and get certified with real-world projects.
           </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -48,14 +49,14 @@ const Academy = () => (
                 Enroll Now <ArrowRight className="ml-1 h-4 w-4" />
               </Button>
             </Link>
-            <Button variant="hero-outline" size="lg">Download Syllabus</Button>
+            <Button variant="outline" size="lg">Download Syllabus</Button>
           </div>
         </div>
       </div>
     </section>
 
     {/* About the Program */}
-    <SectionWrapper>
+    <SectionWrapper className="bg-secondary/50">
       <div className="grid items-center gap-12 md:grid-cols-2">
         <div>
           <h2 className="mb-4 text-3xl font-bold">About the Program</h2>
@@ -66,7 +67,7 @@ const Academy = () => (
             Whether you're a student, business owner, or professional, our courses are designed to help you leverage AI for practical outcomes and career growth.
           </p>
         </div>
-        <div className="rounded-2xl border bg-card p-8">
+        <div className="rounded-2xl border bg-background p-8">
           <BookOpen className="mb-4 h-12 w-12 text-primary" />
           <h3 className="mb-3 text-xl font-semibold">What You Will Learn</h3>
           <ul className="space-y-3">
@@ -84,24 +85,24 @@ const Academy = () => (
     <SectionWrapper dark>
       <div className="mx-auto max-w-3xl text-center">
         <Award className="mx-auto mb-6 h-16 w-16 text-accent" />
-        <h2 className="mb-4 text-3xl font-bold text-hero-foreground">Ezyflow AI Academy Certification</h2>
-        <p className="mb-8 text-hero-muted">
+        <h2 className="mb-4 text-3xl font-bold text-[hsl(0,0%,95%)]">Ezyflow AI Academy Certification</h2>
+        <p className="mb-8 hero-muted">
           Upon completion, receive an official Ezyflow certificate with a unique Certificate ID, signed by Ezyflow.
         </p>
         <div className="grid gap-6 text-left sm:grid-cols-2">
           {["Certificate of Completion", "Unique Certificate ID", "Signed by Ezyflow", "Industry-focused Training"].map((item) => (
             <div key={item} className="glass-card flex items-center gap-3 rounded-xl p-4">
               <CheckCircle className="h-5 w-5 shrink-0 text-accent" />
-              <span className="text-sm text-hero-foreground">{item}</span>
+              <span className="text-sm text-[hsl(0,0%,95%)]">{item}</span>
             </div>
           ))}
         </div>
-        <p className="mt-8 text-xs text-hero-muted">
+        <p className="mt-8 text-xs hero-muted">
           This is a private certification focused on practical skills and real-world application.
         </p>
         <div className="mt-6">
           <Link to="/verify">
-            <Button variant="hero-outline">Verify a Certificate</Button>
+            <Button variant="outline" size="sm" className="border-[hsl(220,15%,30%)] text-[hsl(0,0%,90%)] hover:bg-[hsl(220,15%,20%)]">Verify a Certificate</Button>
           </Link>
         </div>
       </div>
@@ -125,14 +126,14 @@ const Academy = () => (
     {/* Course Formats */}
     <SectionWrapper dark>
       <div className="mx-auto mb-14 max-w-2xl text-center">
-        <h2 className="mb-4 text-3xl font-bold text-hero-foreground">Course Formats</h2>
+        <h2 className="mb-4 text-3xl font-bold text-[hsl(0,0%,95%)]">Course Formats</h2>
       </div>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {formats.map((f) => (
           <div key={f.title} className="glass-card rounded-2xl p-8 text-center">
             <f.icon className="mx-auto mb-4 h-10 w-10 text-accent" />
-            <h3 className="mb-2 font-semibold text-hero-foreground">{f.title}</h3>
-            <p className="text-sm text-hero-muted">{f.desc}</p>
+            <h3 className="mb-2 font-semibold text-[hsl(0,0%,95%)]">{f.title}</h3>
+            <p className="text-sm hero-muted">{f.desc}</p>
           </div>
         ))}
       </div>

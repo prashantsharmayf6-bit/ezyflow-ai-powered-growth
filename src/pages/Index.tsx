@@ -30,19 +30,19 @@ const whyChoose = [
 
 const Index = () => (
   <div>
-    {/* Hero */}
-    <section className="hero-dark relative overflow-hidden pt-16">
-      <div className="absolute inset-0 opacity-30" style={{ background: "radial-gradient(ellipse at 30% 50%, hsl(217 91% 60% / 0.15), transparent 60%), radial-gradient(ellipse at 70% 50%, hsl(172 66% 50% / 0.1), transparent 60%)" }} />
+    {/* Hero - Light */}
+    <section className="relative overflow-hidden bg-background pt-16">
+      <div className="absolute inset-0 opacity-40" style={{ background: "radial-gradient(ellipse at 30% 50%, hsl(217 91% 60% / 0.08), transparent 60%), radial-gradient(ellipse at 70% 50%, hsl(172 66% 50% / 0.06), transparent 60%)" }} />
       <div className="container relative mx-auto px-4 py-24 md:py-36">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 px-4 py-1.5 text-sm text-hero-muted">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm text-muted-foreground">
             <Zap className="h-4 w-4 text-primary" /> AI-Powered Solutions
           </div>
-          <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight text-hero-foreground md:text-6xl lg:text-7xl">
+          <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight md:text-6xl lg:text-7xl">
             Build. Automate.{" "}
             <span className="gradient-text">Scale with AI.</span>
           </h1>
-          <p className="mb-10 text-lg text-hero-muted md:text-xl">
+          <p className="mb-10 text-lg text-muted-foreground md:text-xl">
             Custom software, AI automation, and real-world AI training programs designed for modern businesses.
           </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -52,7 +52,7 @@ const Index = () => (
               </Button>
             </Link>
             <Link to="/academy">
-              <Button variant="hero-outline" size="lg" className="text-base">
+              <Button variant="outline" size="lg" className="text-base">
                 Explore AI Courses
               </Button>
             </Link>
@@ -62,14 +62,14 @@ const Index = () => (
     </section>
 
     {/* Services Overview */}
-    <SectionWrapper>
+    <SectionWrapper className="bg-secondary/50">
       <div className="mx-auto mb-14 max-w-2xl text-center">
         <h2 className="mb-4 text-3xl font-bold md:text-4xl">What We Do</h2>
         <p className="text-muted-foreground">End-to-end technology solutions powered by artificial intelligence.</p>
       </div>
       <div className="grid gap-8 md:grid-cols-3">
         {services.map((s) => (
-          <div key={s.title} className="group rounded-2xl border bg-card p-8 transition-all hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5">
+          <div key={s.title} className="group rounded-2xl border bg-background p-8 transition-all hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5">
             <div className="mb-5 inline-flex rounded-xl gradient-bg p-3">
               <s.icon className="h-6 w-6 text-primary-foreground" />
             </div>
@@ -87,15 +87,15 @@ const Index = () => (
     <SectionWrapper dark>
       <div className="grid items-center gap-12 md:grid-cols-2">
         <div>
-          <h2 className="mb-6 text-3xl font-bold text-hero-foreground md:text-4xl">
+          <h2 className="mb-6 text-3xl font-bold text-[hsl(0,0%,95%)] md:text-4xl">
             About <span className="gradient-text">Ezyflow</span>
           </h2>
-          <p className="mb-6 text-hero-muted">
+          <p className="mb-6 hero-muted">
             We build requirement-based solutions tailored to your business, not one-size-fits-all software. Our white-label deployment model means you own everything — with a transparent, one-time cost structure.
           </p>
           <ul className="space-y-3">
             {["Requirement-based custom solutions", "White-label deployment — your brand, your product", "One-time cost model — no hidden fees", "Business-focused flexibility"].map((t) => (
-              <li key={t} className="flex items-start gap-3 text-sm text-hero-muted">
+              <li key={t} className="flex items-start gap-3 text-sm hero-muted">
                 <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-accent" /> {t}
               </li>
             ))}
@@ -103,12 +103,12 @@ const Index = () => (
         </div>
         <div className="glass-card rounded-2xl p-8">
           <div className="mb-4 text-5xl font-extrabold gradient-text">100+</div>
-          <p className="mb-6 text-hero-muted">Projects delivered across industries</p>
+          <p className="mb-6 hero-muted">Projects delivered across industries</p>
           <div className="grid grid-cols-2 gap-6">
             {[{ n: "50+", l: "Happy Clients" }, { n: "3+", l: "Years Experience" }, { n: "24/7", l: "Support" }, { n: "99%", l: "Satisfaction" }].map((s) => (
               <div key={s.l}>
-                <div className="text-2xl font-bold text-hero-foreground">{s.n}</div>
-                <div className="text-xs text-hero-muted">{s.l}</div>
+                <div className="text-2xl font-bold text-[hsl(0,0%,95%)]">{s.n}</div>
+                <div className="text-xs hero-muted">{s.l}</div>
               </div>
             ))}
           </div>
@@ -136,9 +136,9 @@ const Index = () => (
     </SectionWrapper>
 
     {/* Testimonials */}
-    <SectionWrapper dark>
+    <SectionWrapper className="bg-secondary/50">
       <div className="mx-auto mb-14 max-w-2xl text-center">
-        <h2 className="mb-4 text-3xl font-bold text-hero-foreground md:text-4xl">What Our Clients Say</h2>
+        <h2 className="mb-4 text-3xl font-bold md:text-4xl">What Our Clients Say</h2>
       </div>
       <div className="grid gap-8 md:grid-cols-3">
         {[
@@ -146,14 +146,14 @@ const Index = () => (
           { name: "Priya M.", role: "Business Owner", text: "The AI Academy gave my team practical skills they use every day. Highly recommend." },
           { name: "Amit K.", role: "CTO, Fintech", text: "Their custom SaaS solution saved us 6 months of development time. Outstanding team." },
         ].map((t) => (
-          <div key={t.name} className="glass-card rounded-2xl p-8">
+          <div key={t.name} className="rounded-2xl border bg-background p-8">
             <div className="mb-4 flex gap-1">
               {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-accent text-accent" />)}
             </div>
-            <p className="mb-6 text-sm text-hero-muted">"{t.text}"</p>
+            <p className="mb-6 text-sm text-muted-foreground">"{t.text}"</p>
             <div>
-              <div className="font-semibold text-hero-foreground">{t.name}</div>
-              <div className="text-xs text-hero-muted">{t.role}</div>
+              <div className="font-semibold">{t.name}</div>
+              <div className="text-xs text-muted-foreground">{t.role}</div>
             </div>
           </div>
         ))}
