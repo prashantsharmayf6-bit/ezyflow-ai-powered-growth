@@ -22,6 +22,11 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <div className="fixed top-0 left-0 right-0 z-[60] bg-primary text-primary-foreground text-sm py-1 overflow-hidden">
+          <div className="animate-marquee whitespace-nowrap">
+            🎉 WE ARE NOW MSME REGISTERED &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🎉 WE ARE NOW MSME REGISTERED &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🎉 WE ARE NOW MSME REGISTERED &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🎉 WE ARE NOW MSME REGISTERED &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🎉 WE ARE NOW MSME REGISTERED
+          </div>
+        </div>
         <Navbar />
         <main>
           <Routes>

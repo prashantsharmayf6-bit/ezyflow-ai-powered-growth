@@ -31,7 +31,7 @@ const whyChoose = [
 const Index = () => (
   <div>
     {/* Hero - Light */}
-    <section className="relative overflow-hidden bg-background pt-16">
+    <section className="relative overflow-hidden bg-background pt-24">
       <div className="absolute inset-0 opacity-40" style={{ background: "radial-gradient(ellipse at 30% 50%, hsl(217 91% 60% / 0.08), transparent 60%), radial-gradient(ellipse at 70% 50%, hsl(172 66% 50% / 0.06), transparent 60%)" }} />
       <div className="container relative mx-auto px-4 py-24 md:py-36">
         <div className="mx-auto max-w-3xl text-center">
