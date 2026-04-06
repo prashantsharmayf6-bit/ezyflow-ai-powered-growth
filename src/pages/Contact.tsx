@@ -12,7 +12,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.name.trim() || !form.email.trim() || !form.requirement.trim()) {
+    if (!form.name.trim() || !form.email.trim() || !form.phone.trim() || !form.requirement.trim()) {
       toast({ title: "Please fill all required fields", variant: "destructive" });
       return;
     }
@@ -48,7 +48,7 @@ const Contact = () => {
               <Input type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder="you@company.com" className="h-12" />
             </div>
             <div>
-              <label className="mb-2 block text-sm font-medium">Phone</label>
+              <label className="mb-2 block text-sm font-medium">Phone *</label>
               <Input value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder="+91 9999999999" className="h-12" />
             </div>
             <div>
