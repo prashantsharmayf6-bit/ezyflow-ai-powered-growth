@@ -126,7 +126,7 @@ const Academy = () => (
     {/* Course Formats */}
     <SectionWrapper dark>
       <div className="mx-auto mb-14 max-w-2xl text-center">
-        <h2 className="mb-4 text-3xl font-bold text-[hsl(0,0%,95%)]">Course Formats</h2>
+        <h2 className="mb-4 text-3xl font-bold text-[hsl(0,0%,95%)]">Webinar Formats</h2>
       </div>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {formats.map((f) => (
