@@ -25,6 +25,13 @@ const serviceDetails = [
     features: ["White-Label SaaS Products", "Multi-Tenant Architecture", "Subscription & Billing Systems", "User Management & Roles", "Analytics & Reporting Dashboards"],
     image: BarChart3,
   },
+  {
+    icon: Smartphone,
+    title: "Mobile Apps Development",
+    desc: "Native and cross-platform mobile applications for iOS and Android, designed for performance and great user experience.",
+    features: ["iOS & Android Apps", "Cross-Platform (React Native / Flutter)", "UI/UX Design for Mobile", "App Store Deployment", "Push Notifications & Analytics"],
+    image: Smartphone,
+  },
 ];
 
 const Services = () => (
