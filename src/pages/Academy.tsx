@@ -20,8 +20,8 @@ const audiences = [
 ];
 
 const formats = [
-  { icon: Video, title: "Live Classes", desc: "Interactive sessions with instructors" },
-  { icon: Monitor, title: "Recorded Programs", desc: "Learn at your own pace" },
+  { icon: Video, title: "Live Webinars", desc: "Interactive live sessions with AI experts" },
+  { icon: Monitor, title: "Recorded Webinars", desc: "Watch replays at your own pace" },
   { icon: Presentation, title: "Workshops", desc: "Hands-on intensive sessions" },
   { icon: Building, title: "Corporate Training", desc: "Custom programs for teams" },
 ];
