@@ -46,11 +46,11 @@ const Index = () => (
             Custom software, AI automation, and real-world AI training programs designed for modern businesses.
           </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Link to="/contact">
+            <a href="https://calendly.com/ezyflow-info/30min" target="_blank" rel="noopener noreferrer">
               <Button variant="hero" size="lg" className="text-base">
                 Get a Free Consultation <ArrowRight className="ml-1 h-4 w-4" />
               </Button>
-            </Link>
+            </a>
             <Link to="/academy">
               <Button variant="outline" size="lg" className="text-base">
                 Explore AI Courses
