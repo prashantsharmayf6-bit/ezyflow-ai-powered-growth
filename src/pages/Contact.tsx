@@ -12,7 +12,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.name.trim() || !form.email.trim() || !form.requirement.trim()) {
+    if (!form.name.trim() || !form.email.trim() || !form.phone.trim() || !form.requirement.trim()) {
       toast({ title: "Please fill all required fields", variant: "destructive" });
       return;
     }
