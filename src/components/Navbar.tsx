@@ -38,9 +38,9 @@ const Navbar = () => {
               {l.label}
             </Link>
           ))}
-          <Link to="/contact">
+          <a href="https://calendly.com/ezyflow-info/30min" target="_blank" rel="noopener noreferrer">
             <Button variant="hero" size="sm">Get a Free Consultation</Button>
-          </Link>
+          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -63,9 +63,9 @@ const Navbar = () => {
                 {l.label}
               </Link>
             ))}
-            <Link to="/contact" onClick={() => setOpen(false)}>
+            <a href="https://calendly.com/ezyflow-info/30min" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>
               <Button variant="hero" className="w-full">Get a Free Consultation</Button>
-            </Link>
+            </a>
           </div>
         </div>
       )}

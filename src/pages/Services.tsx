@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionWrapper from "@/components/SectionWrapper";
-import { Code, Bot, Layers, ArrowRight, CheckCircle, Monitor, MessageSquare, BarChart3 } from "lucide-react";
+import { Code, Bot, Layers, ArrowRight, CheckCircle, Monitor, MessageSquare, BarChart3, Smartphone } from "lucide-react";
 
 const serviceDetails = [
   {
@@ -24,6 +24,13 @@ const serviceDetails = [
     desc: "Build and deploy white-label SaaS products with multi-tenant architecture, ready for market.",
     features: ["White-Label SaaS Products", "Multi-Tenant Architecture", "Subscription & Billing Systems", "User Management & Roles", "Analytics & Reporting Dashboards"],
     image: BarChart3,
+  },
+  {
+    icon: Smartphone,
+    title: "Mobile Apps Development",
+    desc: "Native and cross-platform mobile applications for iOS and Android, designed for performance and great user experience.",
+    features: ["iOS & Android Apps", "Cross-Platform (React Native / Flutter)", "UI/UX Design for Mobile", "App Store Deployment", "Push Notifications & Analytics"],
+    image: Smartphone,
   },
 ];
 
@@ -83,9 +90,9 @@ const Services = () => (
         <h2 className="mb-4 text-3xl font-bold">Ready to Get Started?</h2>
         <p className="mb-8 text-muted-foreground">Book a free consultation and let's discuss how we can help your business.</p>
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          <Link to="/contact">
+          <a href="https://calendly.com/ezyflow-info/30min" target="_blank" rel="noopener noreferrer">
             <Button variant="hero" size="lg">Book Consultation</Button>
-          </Link>
+          </a>
           <Link to="/contact">
             <Button variant="outline" size="lg">Request Proposal</Button>
           </Link>
