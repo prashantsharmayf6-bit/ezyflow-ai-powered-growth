@@ -20,8 +20,8 @@ const audiences = [
 ];
 
 const formats = [
-  { icon: Video, title: "Live Classes", desc: "Interactive sessions with instructors" },
-  { icon: Monitor, title: "Recorded Programs", desc: "Learn at your own pace" },
+  { icon: Video, title: "Live Webinars", desc: "Interactive live sessions with AI experts" },
+  { icon: Monitor, title: "Recorded Webinars", desc: "Watch replays at your own pace" },
   { icon: Presentation, title: "Workshops", desc: "Hands-on intensive sessions" },
   { icon: Building, title: "Corporate Training", desc: "Custom programs for teams" },
 ];
@@ -61,10 +61,10 @@ const Academy = () => (
         <div>
           <h2 className="mb-4 text-3xl font-bold">About the Program</h2>
           <p className="mb-4 text-muted-foreground">
-            The Ezyflow AI Academy offers practical, hands-on AI training using tools like ChatGPT, DALL·E, and more. Our programs focus on real-world use cases — not just theory.
+            The Ezyflow AI Academy offers practical, hands-on AI training through live and recorded webinars using tools like ChatGPT, DALL·E, and more. Our programs focus on real-world use cases — not just theory.
           </p>
           <p className="text-muted-foreground">
-            Whether you're a student, business owner, or professional, our courses are designed to help you leverage AI for practical outcomes and career growth.
+            Whether you're a student, business owner, or professional, our webinars are designed to help you leverage AI for practical outcomes and career growth.
           </p>
         </div>
         <div className="rounded-2xl border bg-background p-8">
@@ -126,7 +126,7 @@ const Academy = () => (
     {/* Course Formats */}
     <SectionWrapper dark>
       <div className="mx-auto mb-14 max-w-2xl text-center">
-        <h2 className="mb-4 text-3xl font-bold text-[hsl(0,0%,95%)]">Course Formats</h2>
+        <h2 className="mb-4 text-3xl font-bold text-[hsl(0,0%,95%)]">Webinar Formats</h2>
       </div>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {formats.map((f) => (
