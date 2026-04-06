@@ -121,24 +121,69 @@ const AiCourse = () => (
 
     {/* Pricing */}
     <SectionWrapper dark>
-      <div className="mx-auto max-w-lg text-center">
-        <h2 className="mb-4 text-3xl font-bold text-[hsl(0,0%,95%)]">Invest in Your Future</h2>
-        <div className="glass-card rounded-2xl p-10">
-          <div className="mb-2 text-sm hero-muted line-through">₹9,999</div>
-          <div className="mb-2 text-5xl font-extrabold gradient-text">₹4,999</div>
-          <div className="mb-6 text-sm text-accent">Early Bird Offer — Limited Time</div>
-          <ul className="mb-8 space-y-3 text-left">
-            {["Full course access", "Real-world projects", "Ezyflow Certification", "Lifetime access to materials", "Community access"].map((f) => (
-              <li key={f} className="flex items-center gap-3 text-sm hero-muted">
-                <CheckCircle className="h-4 w-4 shrink-0 text-accent" /> {f}
-              </li>
-            ))}
-          </ul>
-          <Link to="/contact">
-            <Button variant="hero" size="lg" className="w-full text-base">
-              Join Now <ArrowRight className="ml-1 h-4 w-4" />
-            </Button>
-          </Link>
+      <div className="mx-auto max-w-5xl">
+        <h2 className="mb-10 text-center text-3xl font-bold text-[hsl(0,0%,95%)]">Invest in Your Future</h2>
+        <div className="grid gap-8 md:grid-cols-3">
+          {/* Basic */}
+          <div className="glass-card rounded-2xl p-8 text-center">
+            <h3 className="mb-2 text-lg font-semibold text-[hsl(0,0%,95%)]">Basic Module</h3>
+            <div className="mb-1 text-sm hero-muted line-through">₹1,999</div>
+            <div className="mb-2 text-4xl font-extrabold gradient-text">₹999</div>
+            <div className="mb-6 text-sm text-accent">Early Bird Offer</div>
+            <ul className="mb-8 space-y-3 text-left">
+              {["AI Foundations", "Prompt Engineering Basics", "Ezyflow Certification", "Community Access"].map((f) => (
+                <li key={f} className="flex items-center gap-3 text-sm hero-muted">
+                  <CheckCircle className="h-4 w-4 shrink-0 text-accent" /> {f}
+                </li>
+              ))}
+            </ul>
+            <Link to="/contact">
+              <Button variant="hero" size="lg" className="w-full text-base">
+                Join Now <ArrowRight className="ml-1 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+
+          {/* Intermediate */}
+          <div className="glass-card rounded-2xl p-8 text-center ring-2 ring-accent">
+            <div className="mb-3 inline-block rounded-full bg-accent/20 px-3 py-1 text-xs font-semibold text-accent">Most Popular</div>
+            <h3 className="mb-2 text-lg font-semibold text-[hsl(0,0%,95%)]">Intermediate</h3>
+            <div className="mb-1 text-sm hero-muted line-through">₹2,999</div>
+            <div className="mb-2 text-4xl font-extrabold gradient-text">₹1,999</div>
+            <div className="mb-6 text-sm text-accent">Early Bird Offer</div>
+            <ul className="mb-8 space-y-3 text-left">
+              {["Everything in Basic", "Content Creation with AI", "Business Automation", "Real-World Projects", "Ezyflow Certification"].map((f) => (
+                <li key={f} className="flex items-center gap-3 text-sm hero-muted">
+                  <CheckCircle className="h-4 w-4 shrink-0 text-accent" /> {f}
+                </li>
+              ))}
+            </ul>
+            <Link to="/contact">
+              <Button variant="hero" size="lg" className="w-full text-base">
+                Join Now <ArrowRight className="ml-1 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+
+          {/* AI Master Plan */}
+          <div className="glass-card rounded-2xl p-8 text-center">
+            <h3 className="mb-2 text-lg font-semibold text-[hsl(0,0%,95%)]">AI Master Plan</h3>
+            <div className="mb-1 text-sm hero-muted line-through">₹9,999</div>
+            <div className="mb-2 text-4xl font-extrabold gradient-text">₹4,999</div>
+            <div className="mb-6 text-sm text-accent">Early Bird Offer</div>
+            <ul className="mb-8 space-y-3 text-left">
+              {["Everything in Intermediate", "Career & Freelancing Guide", "Lifetime Access", "1-on-1 Mentorship", "Priority Support", "Ezyflow Certification"].map((f) => (
+                <li key={f} className="flex items-center gap-3 text-sm hero-muted">
+                  <CheckCircle className="h-4 w-4 shrink-0 text-accent" /> {f}
+                </li>
+              ))}
+            </ul>
+            <Link to="/contact">
+              <Button variant="hero" size="lg" className="w-full text-base">
+                Join Now <ArrowRight className="ml-1 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </SectionWrapper>
