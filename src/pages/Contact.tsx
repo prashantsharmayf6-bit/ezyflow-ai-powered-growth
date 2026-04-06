@@ -16,7 +16,8 @@ const Contact = () => {
       toast({ title: "Please fill all required fields", variant: "destructive" });
       return;
     }
-    toast({ title: "Message sent!", description: "We'll get back to you within 24 hours." });
+    const message = `Hi Ezyflow,%0A%0A*Name:* ${encodeURIComponent(form.name.trim())}%0A*Email:* ${encodeURIComponent(form.email.trim())}%0A*Phone:* ${encodeURIComponent(form.phone.trim() || "N/A")}%0A*Requirement:* ${encodeURIComponent(form.requirement.trim())}`;
+    window.open(`https://wa.me/916381798761?text=${message}`, "_blank");
     setForm({ name: "", email: "", phone: "", requirement: "" });
   };
 
