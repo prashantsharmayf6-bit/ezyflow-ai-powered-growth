@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/ezyflow-logo.png";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -15,10 +16,13 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-primary/10 bg-hero/80 backdrop-blur-xl">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b bg-background/80 backdrop-blur-xl">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link to="/" className="text-xl font-bold text-hero-foreground">
-          <span className="gradient-text">Ezy</span>flow
+        <Link to="/" className="flex items-center gap-2">
+          <img src={logo} alt="Ezyflow" className="h-9 w-9 object-contain" />
+          <span className="text-xl font-bold">
+            <span className="gradient-text">Ezy</span>flow
+          </span>
         </Link>
 
         {/* Desktop */}
@@ -28,7 +32,7 @@ const Navbar = () => {
               key={l.path}
               to={l.path}
               className={`text-sm font-medium transition-colors hover:text-primary ${
-                location.pathname === l.path ? "text-primary" : "text-hero-muted"
+                location.pathname === l.path ? "text-primary" : "text-muted-foreground"
               }`}
             >
               {l.label}
@@ -40,21 +44,21 @@ const Navbar = () => {
         </div>
 
         {/* Mobile toggle */}
-        <button className="text-hero-foreground md:hidden" onClick={() => setOpen(!open)}>
+        <button className="text-foreground md:hidden" onClick={() => setOpen(!open)}>
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile menu */}
       {open && (
-        <div className="hero-dark border-t border-primary/10 md:hidden">
+        <div className="border-t bg-background md:hidden">
           <div className="container mx-auto flex flex-col gap-4 px-4 py-6">
             {navLinks.map((l) => (
               <Link
                 key={l.path}
                 to={l.path}
                 onClick={() => setOpen(false)}
-                className="text-sm font-medium text-hero-muted hover:text-primary"
+                className="text-sm font-medium text-muted-foreground hover:text-primary"
               >
                 {l.label}
               </Link>

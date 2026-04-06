@@ -4,7 +4,6 @@ import { Input } from "@/components/ui/input";
 import SectionWrapper from "@/components/SectionWrapper";
 import { Search, CheckCircle, XCircle, Award } from "lucide-react";
 
-// Mock certificate database
 const certificates: Record<string, { name: string; course: string; date: string; status: string }> = {
   "EZY-2024-001": { name: "Rahul Sharma", course: "Generative AI Fundamentals", date: "March 15, 2024", status: "Valid" },
   "EZY-2024-002": { name: "Priya Mehta", course: "Business Automation with AI", date: "April 2, 2024", status: "Valid" },
@@ -24,14 +23,15 @@ const Verify = () => {
 
   return (
     <div>
-      <section className="hero-dark pt-16">
-        <div className="container mx-auto px-4 py-24 md:py-32">
+      <section className="relative overflow-hidden bg-background pt-16">
+        <div className="absolute inset-0 opacity-30" style={{ background: "radial-gradient(ellipse at 50% 50%, hsl(217 91% 60% / 0.08), transparent 60%)" }} />
+        <div className="container relative mx-auto px-4 py-24 md:py-32">
           <div className="mx-auto max-w-2xl text-center">
             <Award className="mx-auto mb-6 h-16 w-16 text-accent" />
-            <h1 className="mb-4 text-4xl font-extrabold text-hero-foreground md:text-5xl">
+            <h1 className="mb-4 text-4xl font-extrabold md:text-5xl">
               Verify <span className="gradient-text">Certificate</span>
             </h1>
-            <p className="text-lg text-hero-muted">
+            <p className="text-lg text-muted-foreground">
               Enter a Certificate ID to verify its authenticity.
             </p>
           </div>
