@@ -90,9 +90,9 @@ const Services = () => (
         <h2 className="mb-4 text-3xl font-bold">Ready to Get Started?</h2>
         <p className="mb-8 text-muted-foreground">Book a free consultation and let's discuss how we can help your business.</p>
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          <Link to="/contact">
+          <a href="https://calendly.com/ezyflow-info/30min" target="_blank" rel="noopener noreferrer">
             <Button variant="hero" size="lg">Book Consultation</Button>
-          </Link>
+          </a>
           <Link to="/contact">
             <Button variant="outline" size="lg">Request Proposal</Button>
           </Link>
