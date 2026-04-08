@@ -33,7 +33,7 @@ const Index = () => (
     {/* Hero - Light */}
     <section className="relative overflow-hidden bg-background pt-[92px]">
       <div className="absolute inset-0 opacity-40" style={{ background: "radial-gradient(ellipse at 30% 50%, hsl(217 91% 60% / 0.08), transparent 60%), radial-gradient(ellipse at 70% 50%, hsl(172 66% 50% / 0.06), transparent 60%)" }} />
-      <div className="container relative mx-auto px-4 py-16 md:py-24">
+      <div className="container relative mx-auto px-4 py-8 md:py-14">
         <div className="mx-auto max-w-3xl text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm text-muted-foreground">
             <Zap className="h-4 w-4 text-primary" /> AI-Powered Solutions
