@@ -37,9 +37,9 @@ const serviceDetails = [
 const Services = () => (
   <div>
     {/* Hero */}
-    <section className="relative overflow-hidden bg-background pt-16">
+    <section className="relative overflow-hidden bg-background pt-20">
       <div className="absolute inset-0 opacity-30" style={{ background: "radial-gradient(ellipse at 50% 50%, hsl(217 91% 60% / 0.08), transparent 60%)" }} />
-      <div className="container relative mx-auto px-4 py-24 md:py-32">
+      <div className="container relative mx-auto px-4 py-6 md:py-10">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="mb-6 text-4xl font-extrabold md:text-5xl">
             Our <span className="gradient-text">Services</span>

@@ -28,9 +28,9 @@ const modules = [
 const AiCourse = () => (
   <div>
     {/* Hero */}
-    <section className="relative overflow-hidden bg-background pt-16">
+    <section className="relative overflow-hidden bg-background pt-20">
       <div className="absolute inset-0 opacity-30" style={{ background: "radial-gradient(ellipse at 30% 50%, hsl(217 91% 60% / 0.1), transparent 60%), radial-gradient(ellipse at 70% 50%, hsl(172 66% 50% / 0.08), transparent 60%)" }} />
-      <div className="container relative mx-auto px-4 py-24 md:py-36">
+      <div className="container relative mx-auto px-4 py-6 md:py-10">
         <div className="mx-auto max-w-3xl text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/5 px-4 py-1.5 text-sm text-accent">
             <Clock className="h-4 w-4" /> Limited Seats Available
