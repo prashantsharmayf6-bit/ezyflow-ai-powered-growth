@@ -192,5 +192,6 @@ const AiCourse = () => {
     </SectionWrapper>
   </div>
 );
+};
 
 export default AiCourse;

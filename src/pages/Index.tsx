@@ -183,5 +183,6 @@ const Index = () => {
     </SectionWrapper>
   </div>
 );
+};
 
 export default Index;

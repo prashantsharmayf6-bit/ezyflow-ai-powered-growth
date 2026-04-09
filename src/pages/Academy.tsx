@@ -162,5 +162,6 @@ const Academy = () => {
     </SectionWrapper>
   </div>
 );
+};
 
 export default Academy;

@@ -109,5 +109,6 @@ const Services = () => {
     </SectionWrapper>
   </div>
 );
+};
 
 export default Services;
