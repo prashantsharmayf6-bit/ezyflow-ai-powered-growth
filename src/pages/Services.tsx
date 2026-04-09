@@ -35,7 +35,14 @@ const serviceDetails = [
   },
 ];
 
-const Services = () => (
+const Services = () => {
+  useSEO({
+    title: "Services — Custom Software, AI Automation & Mobile Apps | Ezyflow",
+    description: "Custom software development, AI automation solutions, mobile app development, WhatsApp automation, and SaaS products tailored for your business.",
+    canonical: "https://ezyflow.in/services",
+    keywords: "Custom Software Development India, AI Automation, Mobile App Development, WhatsApp Automation, SaaS Development",
+  });
+  return (
   <div>
     {/* Hero */}
     <section className="relative overflow-hidden bg-background pt-20">

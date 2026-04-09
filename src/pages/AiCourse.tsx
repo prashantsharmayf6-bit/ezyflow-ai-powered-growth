@@ -26,7 +26,14 @@ const modules = [
   { title: "Module 6: Career & Freelancing", desc: "Monetize your AI skills and land clients." },
 ];
 
-const AiCourse = () => (
+const AiCourse = () => {
+  useSEO({
+    title: "Enroll in AI Course — Learn AI That Makes You Money | Ezyflow",
+    description: "Practical AI course starting at ₹999. Learn prompt engineering, business automation, content creation with ChatGPT & more. Get Ezyflow certified.",
+    canonical: "https://ezyflow.in/ai-course",
+    keywords: "AI Course India, Learn AI Online, AI Certification Course, ChatGPT Course, Prompt Engineering Course, Business Automation Training",
+  });
+  return (
   <div>
     {/* Hero */}
     <section className="relative overflow-hidden bg-background pt-20">

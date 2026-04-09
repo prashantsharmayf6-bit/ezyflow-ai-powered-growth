@@ -29,7 +29,14 @@ const whyChoose = [
   { icon: TrendingUp, title: "Scalable Systems", desc: "Architecture that grows with your business." },
 ];
 
-const Index = () => (
+const Index = () => {
+  useSEO({
+    title: "Ezyflow — AI Automation, Custom Software & AI Training | India",
+    description: "Ezyflow offers AI automation solutions, custom software development, SaaS products, mobile apps, and certified Generative AI training. MSME registered company in India.",
+    canonical: "https://ezyflow.in",
+    keywords: "Ezyflow, AI Automation India, Custom Software Development, SaaS, Mobile Apps, AI Training, MSME",
+  });
+  return (
   <div>
     {/* Hero - Light */}
     <section className="relative overflow-hidden bg-background pt-20">

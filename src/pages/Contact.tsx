@@ -8,6 +8,12 @@ import { useToast } from "@/hooks/use-toast";
 import useSEO from "@/hooks/useSEO";
 
 const Contact = () => {
+  useSEO({
+    title: "Contact Ezyflow — Get a Free AI Consultation",
+    description: "Reach out to Ezyflow for custom software, AI automation, or AI training inquiries. Email: info@ezyflow.in | Phone: +91 6381798761.",
+    canonical: "https://ezyflow.in/contact",
+    keywords: "Contact Ezyflow, AI Consultation India, Software Development Quote, AI Training Inquiry",
+  });
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", phone: "", requirement: "" });
 

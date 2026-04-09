@@ -27,7 +27,14 @@ const formats = [
   { icon: Building, title: "Corporate Training", desc: "Custom programs for teams" },
 ];
 
-const Academy = () => (
+const Academy = () => {
+  useSEO({
+    title: "Ezyflow AI Academy — Generative AI Certification & Webinars | India",
+    description: "Get certified in Generative AI with Ezyflow AI Academy. Live and recorded webinars on ChatGPT, DALL·E, prompt engineering, and business automation.",
+    canonical: "https://ezyflow.in/academy",
+    keywords: "AI Academy India, Generative AI Course, AI Certification, ChatGPT Training, Prompt Engineering, AI Webinars",
+  });
+  return (
   <div>
     {/* Hero */}
     <section className="relative overflow-hidden bg-background pt-20">
