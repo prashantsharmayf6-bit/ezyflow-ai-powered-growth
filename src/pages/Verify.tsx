@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import SectionWrapper from "@/components/SectionWrapper";
 import { Search, CheckCircle, XCircle, Award } from "lucide-react";
+import useSEO from "@/hooks/useSEO";
 
 const certificates: Record<string, { name: string; course: string; date: string; status: string }> = {
   "EZY-2024-001": { name: "Rahul Sharma", course: "Generative AI Fundamentals", date: "March 15, 2024", status: "Valid" },
@@ -11,6 +12,12 @@ const certificates: Record<string, { name: string; course: string; date: string;
 };
 
 const Verify = () => {
+  useSEO({
+    title: "Verify Certificate — Ezyflow AI Academy",
+    description: "Verify your Ezyflow AI Academy certificate using your unique Certificate ID. Confirm authenticity of your Generative AI certification.",
+    canonical: "https://ezyflow.in/verify",
+    keywords: "Verify AI Certificate, Ezyflow Certificate Verification, AI Academy Certification Check",
+  });
   const [certId, setCertId] = useState("");
   const [result, setResult] = useState<null | { found: boolean; data?: typeof certificates[string] }>(null);
 

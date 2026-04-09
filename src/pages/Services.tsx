@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionWrapper from "@/components/SectionWrapper";
 import { Code, Bot, Layers, ArrowRight, CheckCircle, Monitor, MessageSquare, BarChart3, Smartphone } from "lucide-react";
+import useSEO from "@/hooks/useSEO";
 
 const serviceDetails = [
   {
@@ -34,7 +35,14 @@ const serviceDetails = [
   },
 ];
 
-const Services = () => (
+const Services = () => {
+  useSEO({
+    title: "Services — Custom Software, AI Automation & Mobile Apps | Ezyflow",
+    description: "Custom software development, AI automation solutions, mobile app development, WhatsApp automation, and SaaS products tailored for your business.",
+    canonical: "https://ezyflow.in/services",
+    keywords: "Custom Software Development India, AI Automation, Mobile App Development, WhatsApp Automation, SaaS Development",
+  });
+  return (
   <div>
     {/* Hero */}
     <section className="relative overflow-hidden bg-background pt-20">
@@ -101,5 +109,6 @@ const Services = () => (
     </SectionWrapper>
   </div>
 );
+};
 
 export default Services;
