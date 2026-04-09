@@ -42,82 +42,13 @@ const AiCourse = () => (
           <p className="mb-10 text-lg text-muted-foreground">
             Stop watching tutorials. Start building real AI projects, automating workflows, and earning with practical skills.
           </p>
-          <Link to="/contact">
-            <Button variant="hero" size="lg" className="text-base">
-              Join Now <ArrowRight className="ml-1 h-4 w-4" />
-            </Button>
-          </Link>
-          <div className="mt-8 flex items-center justify-center gap-6 text-sm text-muted-foreground">
+          <div className="mt-4 flex items-center justify-center gap-6 text-sm text-muted-foreground">
             <span className="flex items-center gap-1"><Users className="h-4 w-4 text-accent" /> 500+ Enrolled</span>
             <span className="flex items-center gap-1"><Star className="h-4 w-4 text-accent" /> 4.9/5 Rating</span>
           </div>
         </div>
       </div>
     </section>
-
-    {/* Pain Points & Benefits */}
-    <SectionWrapper className="bg-secondary/50">
-      <div className="grid gap-12 md:grid-cols-2">
-        <div>
-          <h2 className="mb-6 text-2xl font-bold">Sound Familiar?</h2>
-          <ul className="space-y-4">
-            {painPoints.map((p) => (
-              <li key={p} className="flex items-start gap-3 text-muted-foreground">
-                <XCircle className="mt-0.5 h-5 w-5 shrink-0 text-destructive" /> {p}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h2 className="mb-6 text-2xl font-bold">What You'll Achieve</h2>
-          <ul className="space-y-4">
-            {benefits.map((b) => (
-              <li key={b} className="flex items-start gap-3 text-muted-foreground">
-                <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-accent" /> {b}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </SectionWrapper>
-
-    {/* Course Breakdown */}
-    <SectionWrapper dark>
-      <div className="mx-auto mb-14 max-w-2xl text-center">
-        <h2 className="mb-4 text-3xl font-bold text-[hsl(0,0%,95%)]">Course Breakdown</h2>
-      </div>
-      <div className="mx-auto grid max-w-3xl gap-4">
-        {modules.map((m) => (
-          <div key={m.title} className="glass-card flex items-start gap-4 rounded-xl p-6">
-            <Zap className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
-            <div>
-              <h3 className="font-semibold text-[hsl(0,0%,95%)]">{m.title}</h3>
-              <p className="text-sm hero-muted">{m.desc}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </SectionWrapper>
-
-    {/* Testimonials */}
-    <SectionWrapper>
-      <div className="mx-auto mb-14 max-w-2xl text-center">
-        <h2 className="mb-4 text-3xl font-bold">What Students Say</h2>
-      </div>
-      <div className="grid gap-8 md:grid-cols-3">
-        {[
-          { name: "Neha R.", text: "This course helped me land my first AI freelancing gig within 2 weeks!" },
-          { name: "Vikram S.", text: "Finally, a practical course. I automated my entire content pipeline." },
-          { name: "Sanya P.", text: "The certification added real value to my resume. Got promoted within a month!" },
-        ].map((t) => (
-          <div key={t.name} className="rounded-2xl border bg-card p-8">
-            <div className="mb-3 flex gap-1">{[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-accent text-accent" />)}</div>
-            <p className="mb-4 text-sm text-muted-foreground">"{t.text}"</p>
-            <div className="font-semibold">{t.name}</div>
-          </div>
-        ))}
-      </div>
-    </SectionWrapper>
 
     {/* Pricing */}
     <SectionWrapper dark>
@@ -185,6 +116,70 @@ const AiCourse = () => (
             </Link>
           </div>
         </div>
+      </div>
+    </SectionWrapper>
+
+    {/* Pain Points & Benefits */}
+    <SectionWrapper className="bg-secondary/50">
+      <div className="grid gap-12 md:grid-cols-2">
+        <div>
+          <h2 className="mb-6 text-2xl font-bold">Sound Familiar?</h2>
+          <ul className="space-y-4">
+            {painPoints.map((p) => (
+              <li key={p} className="flex items-start gap-3 text-muted-foreground">
+                <XCircle className="mt-0.5 h-5 w-5 shrink-0 text-destructive" /> {p}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h2 className="mb-6 text-2xl font-bold">What You'll Achieve</h2>
+          <ul className="space-y-4">
+            {benefits.map((b) => (
+              <li key={b} className="flex items-start gap-3 text-muted-foreground">
+                <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-accent" /> {b}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </SectionWrapper>
+
+    {/* Course Breakdown */}
+    <SectionWrapper dark>
+      <div className="mx-auto mb-14 max-w-2xl text-center">
+        <h2 className="mb-4 text-3xl font-bold text-[hsl(0,0%,95%)]">Course Breakdown</h2>
+      </div>
+      <div className="mx-auto grid max-w-3xl gap-4">
+        {modules.map((m) => (
+          <div key={m.title} className="glass-card flex items-start gap-4 rounded-xl p-6">
+            <Zap className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
+            <div>
+              <h3 className="font-semibold text-[hsl(0,0%,95%)]">{m.title}</h3>
+              <p className="text-sm hero-muted">{m.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </SectionWrapper>
+
+    {/* Testimonials */}
+    <SectionWrapper>
+      <div className="mx-auto mb-14 max-w-2xl text-center">
+        <h2 className="mb-4 text-3xl font-bold">What Students Say</h2>
+      </div>
+      <div className="grid gap-8 md:grid-cols-3">
+        {[
+          { name: "Neha R.", text: "This course helped me land my first AI freelancing gig within 2 weeks!" },
+          { name: "Vikram S.", text: "Finally, a practical course. I automated my entire content pipeline." },
+          { name: "Sanya P.", text: "The certification added real value to my resume. Got promoted within a month!" },
+        ].map((t) => (
+          <div key={t.name} className="rounded-2xl border bg-card p-8">
+            <div className="mb-3 flex gap-1">{[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-accent text-accent" />)}</div>
+            <p className="mb-4 text-sm text-muted-foreground">"{t.text}"</p>
+            <div className="font-semibold">{t.name}</div>
+          </div>
+        ))}
       </div>
     </SectionWrapper>
   </div>
