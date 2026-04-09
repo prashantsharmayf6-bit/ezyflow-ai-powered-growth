@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionWrapper from "@/components/SectionWrapper";
 import { ArrowRight, CheckCircle, XCircle, Star, Clock, Users, Zap } from "lucide-react";
+import useSEO from "@/hooks/useSEO";
 
 const painPoints = [
   "No practical AI skills despite watching tutorials",

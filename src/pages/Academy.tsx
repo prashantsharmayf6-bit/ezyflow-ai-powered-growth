@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionWrapper from "@/components/SectionWrapper";
 import { GraduationCap, CheckCircle, ArrowRight, Award, BookOpen, Users, Briefcase, Monitor, Video, Presentation, Building } from "lucide-react";
+import useSEO from "@/hooks/useSEO";
 
 const curriculum = [
   "Generative AI Fundamentals",

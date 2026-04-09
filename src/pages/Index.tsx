@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionWrapper from "@/components/SectionWrapper";
 import { Code, Bot, GraduationCap, CheckCircle, Star, ArrowRight, Zap, Shield, Users, TrendingUp } from "lucide-react";
+import useSEO from "@/hooks/useSEO";
 
 const services = [
   {

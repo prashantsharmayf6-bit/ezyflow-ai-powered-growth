@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import SectionWrapper from "@/components/SectionWrapper";
 import { Mail, Phone, MessageCircle, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import useSEO from "@/hooks/useSEO";
 
 const Contact = () => {
   const { toast } = useToast();
