@@ -3,29 +3,30 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import SectionWrapper from "@/components/SectionWrapper";
-import { Mail, Phone, MessageCircle, Send } from "lucide-react";
+import { Mail, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import useSEO from "@/hooks/useSEO";
 
 const Contact = () => {
   useSEO({
     title: "Contact Ezyflow — Get a Free AI Consultation",
-    description: "Reach out to Ezyflow for custom software, AI automation, or AI training inquiries. Email: info@ezyflow.in | Phone: +91 6381798761.",
+    description: "Reach out to Ezyflow for custom software, AI automation, or AI training inquiries. Email: info@ezyflow.in.",
     canonical: "https://ezyflow.in/contact",
     keywords: "Contact Ezyflow, AI Consultation India, Software Development Quote, AI Training Inquiry",
   });
   const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", email: "", phone: "", requirement: "" });
+  const [form, setForm] = useState({ name: "", email: "", requirement: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.name.trim() || !form.email.trim() || !form.phone.trim() || !form.requirement.trim()) {
+    if (!form.name.trim() || !form.email.trim() || !form.requirement.trim()) {
       toast({ title: "Please fill all required fields", variant: "destructive" });
       return;
     }
-    const message = encodeURIComponent(`Hi Ezyflow,\n\n*Name:* ${form.name.trim()}\n*Email:* ${form.email.trim()}\n*Phone:* ${form.phone.trim()}\n*Requirement:* ${form.requirement.trim()}`);
-    window.open(`https://wa.me/916381798761?text=${message}`, "_blank");
-    setForm({ name: "", email: "", phone: "", requirement: "" });
+    const subject = encodeURIComponent("New Inquiry from Ezyflow Website");
+    const body = encodeURIComponent(`Hi Ezyflow,\n\nName: ${form.name.trim()}\nEmail: ${form.email.trim()}\n\nRequirement:\n${form.requirement.trim()}`);
+    window.location.href = `mailto:info@ezyflow.in?subject=${subject}&body=${body}`;
+    setForm({ name: "", email: "", requirement: "" });
   };
 
   return (
@@ -55,10 +56,6 @@ const Contact = () => {
               <Input type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder="you@company.com" className="h-12" />
             </div>
             <div>
-              <label className="mb-2 block text-sm font-medium">Phone *</label>
-              <Input value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder="+91 9999999999" className="h-12" />
-            </div>
-            <div>
               <label className="mb-2 block text-sm font-medium">Your Requirement *</label>
               <Textarea value={form.requirement} onChange={(e) => setForm({ ...form, requirement: e.target.value })} placeholder="Tell us about your project..." rows={5} />
             </div>
@@ -75,28 +72,14 @@ const Contact = () => {
                   <div className="rounded-xl gradient-bg p-3"><Mail className="h-5 w-5 text-primary-foreground" /></div>
                   <div>
                     <div className="text-sm text-muted-foreground">Email</div>
-                    <div className="font-medium">info@ezyflow.in</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="rounded-xl gradient-bg p-3"><Phone className="h-5 w-5 text-primary-foreground" /></div>
-                  <div>
-                    <div className="text-sm text-muted-foreground">Phone</div>
-                    <div className="font-medium">+91 6381798761</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="rounded-xl gradient-bg p-3"><MessageCircle className="h-5 w-5 text-primary-foreground" /></div>
-                  <div>
-                    <div className="text-sm text-muted-foreground">WhatsApp</div>
-                    <a href="https://wa.me/916381798761" className="font-medium text-primary hover:underline">Chat with us</a>
+                    <a href="mailto:info@ezyflow.in" className="font-medium text-primary hover:underline">info@ezyflow.in</a>
                   </div>
                 </div>
               </div>
             </div>
             <div className="rounded-2xl border bg-card p-8">
               <h4 className="mb-3 font-semibold">Quick Response Guarantee</h4>
-              <p className="text-sm text-muted-foreground">We respond to all inquiries within 24 hours. For urgent requirements, reach out via WhatsApp.</p>
+              <p className="text-sm text-muted-foreground">We respond to all inquiries within 24 hours via email.</p>
             </div>
           </div>
         </div>
