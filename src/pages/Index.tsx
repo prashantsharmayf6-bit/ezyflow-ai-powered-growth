@@ -110,10 +110,10 @@ const Index = () => {
           </ul>
         </div>
         <div className="glass-card rounded-2xl p-8">
-          <div className="mb-4 text-5xl font-extrabold gradient-text">100+</div>
+          <div className="mb-4 text-5xl font-extrabold gradient-text">10+</div>
           <p className="mb-6 hero-muted">Projects delivered across industries</p>
           <div className="grid grid-cols-2 gap-6">
-            {[{ n: "50+", l: "Happy Clients" }, { n: "3+", l: "Years Experience" }, { n: "24/7", l: "Support" }, { n: "99%", l: "Satisfaction" }].map((s) => (
+            {[{ n: "5+", l: "Happy Clients" }, { n: "1+", l: "Years Experience" }, { n: "24/7", l: "Support" }, { n: "100%", l: "Satisfaction" }].map((s) => (
               <div key={s.l}>
                 <div className="text-2xl font-bold text-[hsl(0,0%,95%)]">{s.n}</div>
                 <div className="text-xs hero-muted">{s.l}</div>
